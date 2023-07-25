@@ -19,6 +19,5 @@ public record DadosCadastroCliente(
 
         String telefone,
 
-        @NotNull(message = "O preenchimento dos campos de endereço são obrigatórios!")
         DadosCadastroEndereco endereco) {
 }
