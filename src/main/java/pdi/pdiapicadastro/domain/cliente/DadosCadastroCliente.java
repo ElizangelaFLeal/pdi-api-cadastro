@@ -1,5 +1,6 @@
 package pdi.pdiapicadastro.domain.cliente;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -18,6 +19,5 @@ public record DadosCadastroCliente(
         String email,
 
         String telefone,
-
         DadosCadastroEndereco endereco) {
 }

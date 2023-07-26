@@ -3,7 +3,7 @@ create table clientes(
         nome varchar(100) not null,
         email varchar(100) not null,
         cpf varchar(14) not null,
-        telefone varchar (10),
+        telefone varchar (16),
         logradouro varchar(100),
         bairro varchar(100),
         cep varchar(9),
@@ -14,4 +14,4 @@ create table clientes(
 
         primary key(id)
 
-)
+);
