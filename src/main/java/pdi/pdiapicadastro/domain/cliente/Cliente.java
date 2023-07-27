@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import pdi.pdiapicadastro.domain.endereco.DadosCadastroEndereco;
 import pdi.pdiapicadastro.domain.endereco.Endereco;
 
+import java.util.List;
+
 @Table(name="clientes")
 @Entity(name="Cliente")
 @Getter
@@ -49,5 +51,7 @@ public class Cliente {
         }
     }
 
-
+    public void listar(DadosCadastroCliente dadosCadastroCliente) {
+        getId();
+    }
 }

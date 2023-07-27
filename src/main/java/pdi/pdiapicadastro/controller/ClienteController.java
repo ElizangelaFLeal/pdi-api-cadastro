@@ -10,6 +10,8 @@ import pdi.pdiapicadastro.domain.cliente.DadosCadastroCliente;
 import jakarta.transaction.Transactional;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
@@ -27,5 +29,9 @@ public class ClienteController {
     public void atualizar(@RequestBody @Valid DadosAtualizarCliente dadosAtualizarCliente ){
         var dadosCliente = clienteRepository.getReferenceById(dadosAtualizarCliente.id());
         dadosCliente.atualizar(dadosAtualizarCliente);
+    }
+    @GetMapping
+    public List<Cliente> listar(){
+        return clienteRepository.findAll();
     }
 }
