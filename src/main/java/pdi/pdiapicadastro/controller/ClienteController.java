@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pdi.pdiapicadastro.domain.cliente.Cliente;
 import pdi.pdiapicadastro.domain.cliente.ClienteRepository;
+import pdi.pdiapicadastro.domain.cliente.DadosAtualizarCliente;
 import pdi.pdiapicadastro.domain.cliente.DadosCadastroCliente;
 import jakarta.transaction.Transactional;
 import org.springframework.http.ResponseEntity;
@@ -20,5 +21,11 @@ public class ClienteController {
     @Transactional
     public void cadastrar(@RequestBody @Valid DadosCadastroCliente dadosCadastroCliente){
         clienteRepository.save(new Cliente(dadosCadastroCliente));
+    }
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizarCliente dadosAtualizarCliente ){
+        var dadosCliente = clienteRepository.getReferenceById(dadosAtualizarCliente.id());
+        dadosCliente.atualizar(dadosAtualizarCliente);
     }
 }

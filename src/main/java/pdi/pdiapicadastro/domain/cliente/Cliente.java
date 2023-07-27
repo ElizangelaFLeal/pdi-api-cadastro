@@ -39,4 +39,15 @@ public class Cliente {
         this.telefone = dadosCadastroCliente.telefone();
         this.endereco = new Endereco(dadosCadastroCliente.endereco());
     }
+
+    public void atualizar(DadosAtualizarCliente dadosAtualizarCliente) {
+        if(dadosAtualizarCliente.telefone() != null){
+            this.telefone = dadosAtualizarCliente.telefone();
+        }
+        if(dadosAtualizarCliente.endereco() != null){
+            this.endereco.atualizarDadosEndereco(dadosAtualizarCliente.endereco());
+        }
+    }
+
+
 }

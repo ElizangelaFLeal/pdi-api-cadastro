@@ -36,4 +36,28 @@ public class Endereco {
         this.cidade = dadosCadastroEndereco.cidade();
         this.uf = dadosCadastroEndereco.uf();
     }
+    public void atualizarDadosEndereco(DadosCadastroEndereco dadosAtualizaEndereco) {
+        if(dadosAtualizaEndereco.logradouro() != getLogradouro()){
+            this.logradouro = dadosAtualizaEndereco.logradouro();
+        }
+        if(dadosAtualizaEndereco.bairro() != getBairro()){
+            this.bairro = dadosAtualizaEndereco.bairro();
+        }
+        if(dadosAtualizaEndereco.cep() != getCep()){
+            this.cep = dadosAtualizaEndereco.cep();
+        }
+        if(dadosAtualizaEndereco.numero() != getNumero()){
+            this.numero = dadosAtualizaEndereco.numero();
+        }
+        if(dadosAtualizaEndereco.complemento() != getComplemento()){
+            this.complemento = dadosAtualizaEndereco.complemento();
+        }
+        if(dadosAtualizaEndereco.cidade() != getCidade()){
+            this.cidade = dadosAtualizaEndereco.cidade();
+        }
+        if(dadosAtualizaEndereco.uf() != getUf()){
+            this.uf = dadosAtualizaEndereco.uf();
+        }
+    }
+
 }

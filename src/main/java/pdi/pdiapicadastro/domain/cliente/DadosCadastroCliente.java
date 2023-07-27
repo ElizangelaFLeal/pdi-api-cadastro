@@ -19,5 +19,6 @@ public record DadosCadastroCliente(
         String email,
 
         String telefone,
+
         DadosCadastroEndereco endereco) {
 }
