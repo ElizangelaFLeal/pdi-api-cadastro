@@ -34,7 +34,6 @@ public class ClienteController {
     public Page<DadosListagemCliente> listarClientes(@PageableDefault(size = 10, sort = {"nome"}) Pageable pageable){
         return clienteRepository.findAll(pageable).map(DadosListagemCliente::new);
     }
-
     @GetMapping("/{id}")
     public List<DadosListagemCliente> detalharCliente(@PathVariable Long id){
         return clienteRepository.findById(id).stream().map(DadosListagemCliente::new).toList();
