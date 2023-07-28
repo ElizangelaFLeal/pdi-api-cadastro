@@ -7,6 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import pdi.pdiapicadastro.domain.endereco.DadosCadastroEndereco;
 import pdi.pdiapicadastro.domain.endereco.Endereco;
 
@@ -54,4 +59,5 @@ public class Cliente {
     public void listar(DadosCadastroCliente dadosCadastroCliente) {
         getId();
     }
+
 }

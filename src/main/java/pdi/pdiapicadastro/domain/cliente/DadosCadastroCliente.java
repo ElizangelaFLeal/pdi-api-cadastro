@@ -4,10 +4,11 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.data.annotation.Id;
 import pdi.pdiapicadastro.domain.endereco.DadosCadastroEndereco;
 
 public record DadosCadastroCliente(
-        @NotBlank
+       @Id
         Long id,
         @NotBlank(message = "O preenchimento do campo nome é obrigatório!")
         String nome,
