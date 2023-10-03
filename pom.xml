@@ -12,7 +12,7 @@
 	<artifactId>pdi-api-cadastro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pdi-api-cadastro</name>
-	<description>Demo project for Spring Boot</description>
+		<description>Projeto PDI Cadastro de Clientes para avaliação de desenvolvimento pessoal</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -48,7 +48,6 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-mysql</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
@@ -58,6 +57,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>4.2.1</version>
 		</dependency>
 	</dependencies>
 

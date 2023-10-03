@@ -35,6 +35,10 @@ public class Cliente {
 
     private String telefone;
 
+    private String login;
+
+    private String senha;
+
     @Embedded
     private Endereco endereco;
 
